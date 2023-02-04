@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/component-diagram
+
+
+package "Dispatcher" {
+  [Dispatcher ] -u- "JMS entrance queue"
+}
+
+package "Clients / Executors" {
+    [Execute job 1] --> "JMS entrance queue"
+}
+
+node "Worker listeners" {
+    [Worker 1] -u- "Topic 1"
+    [Worker 2] -u- "Topic 2"
+    [Worker 3] -u- "Topic 3"
+    [Worker 4] -u- "Topic 4"
+}
+
+[Dispatcher ] -d-> "Topic 1"
+[Dispatcher ] -d-> "Topic 2"
+[Dispatcher ] -d-> "Topic 3"
+[Dispatcher ] -d-> "Topic 4"
+
+@enduml
