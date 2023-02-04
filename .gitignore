@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+### Brokers's temp folder for embedded ###
+
+activemq-data
