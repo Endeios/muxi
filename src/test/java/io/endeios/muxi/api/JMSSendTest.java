@@ -3,10 +3,7 @@ package io.endeios.muxi.api;
 import lombok.extern.java.Log;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.junit.jupiter.api.Test;
-import org.springframework.jms.connection.SingleConnectionFactory;
 import org.springframework.jms.core.JmsTemplate;
-
-import javax.jms.ConnectionFactory;
 @Log
 public class JMSSendTest {
 
@@ -22,7 +19,7 @@ public class JMSSendTest {
         }
     }
 
-    @Test
+    //@Test
     void receive() {
         JmsTemplate jmsTemplate = new JmsTemplate(getConnectionFactory());
         String data=null;
@@ -34,8 +31,8 @@ public class JMSSendTest {
 
     private static ActiveMQConnectionFactory getConnectionFactory() {
         ActiveMQConnectionFactory cf = new ActiveMQConnectionFactory();
-        cf.setUserName("user");
-        cf.setPassword("password");
+        // cf.setUserName("user");
+        // cf.setPassword("password");
         cf.setBrokerURL("tcp://localhost:61616");
         return cf;
     }

@@ -18,12 +18,12 @@ import javax.jms.ConnectionFactory;
 @Configuration
 public class BrokerConfig {
 
-    //@Bean
+    @Bean
     public BrokerService brokerService() throws Exception {
         BrokerService broker = new BrokerService();
         // configure the broker
         broker.setBrokerName("broker");
-        broker.addConnector("tcp://localhost:61617");
+        broker.addConnector("tcp://localhost:61616");
         broker.start();
         log.info("Starting broker: "+broker);
         return broker;
@@ -39,6 +39,13 @@ public class BrokerConfig {
     }
 
     @Bean
+    public JmsListenerContainerFactory<?> jmsListenerContainerFactory(
+                                                                      ConnectionFactory connectionFactory,
+                                                                      DefaultJmsListenerContainerFactoryConfigurer configurer){
+        return myFactory(connectionFactory, configurer);
+    }
+
+    @Bean
     public CachingConnectionFactory cachingConnectionFactory(){
         return new CachingConnectionFactory(connectionFactory());
     }
@@ -48,8 +55,8 @@ public class BrokerConfig {
     @Qualifier("connectionFactory")
     ConnectionFactory connectionFactory(){
         ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory();
-        activeMQConnectionFactory.setUserName("user");
-        activeMQConnectionFactory.setPassword("password");
+        // activeMQConnectionFactory.setUserName("user");
+        // activeMQConnectionFactory.setPassword("password");
         activeMQConnectionFactory.setBrokerURL("tcp://localhost:61616");
         log.info("Starting Low-level Connection Factory: "+activeMQConnectionFactory);
         return activeMQConnectionFactory;

@@ -20,7 +20,7 @@ public class MyJmsListenerConfigurer implements JmsListenerConfigurer {
             SimpleJmsListenerEndpoint endpoint = new SimpleJmsListenerEndpoint();
             endpoint.setId("ID|"+topic);
             endpoint.setDestination(topic);
-            endpoint.setMessageListener(new MyWorkerMessageListener());
+            endpoint.setMessageListener(new MyWorkerMessageListener(topic));
             registrar.registerEndpoint(endpoint);
         }
     }
