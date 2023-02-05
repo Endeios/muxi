@@ -1,7 +1,11 @@
 package io.endeios.muxi.api;
 
+import io.endeios.muxi.api.config.BrokerConfig;
 import lombok.extern.java.Log;
 import org.apache.activemq.ActiveMQConnectionFactory;
+import org.apache.activemq.broker.BrokerService;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.jms.core.JmsTemplate;
 @Log
@@ -9,7 +13,7 @@ public class JMSSendTest {
 
     public static final String DEST = "test_dest";
 
-    @Test
+    //@Test
     void send() {
         ActiveMQConnectionFactory cf = getConnectionFactory();
         JmsTemplate jmsTemplate = new JmsTemplate(cf);

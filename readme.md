@@ -30,3 +30,4 @@ the proprieties files: not a big deal but bothersome.
 - https://docs.spring.io/spring-framework/docs/current/reference/html/integration.html#jms-annotated-programmatic-registration
 - https://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/html/beans.html#beans-factory-lifecycle-processor
 - https://www.baeldung.com/lmax-disruptor-concurrency
+- https://www.baeldung.com/executable-jar-with-maven
