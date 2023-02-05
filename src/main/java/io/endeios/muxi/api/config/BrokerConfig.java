@@ -55,8 +55,8 @@ public class BrokerConfig {
     @Qualifier("connectionFactory")
     ConnectionFactory connectionFactory(){
         ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory();
-        // activeMQConnectionFactory.setUserName("user");
-        // activeMQConnectionFactory.setPassword("password");
+        activeMQConnectionFactory.setUserName("user");
+        activeMQConnectionFactory.setPassword("password");
         activeMQConnectionFactory.setBrokerURL("tcp://localhost:61616");
         log.info("Starting Low-level Connection Factory: "+activeMQConnectionFactory);
         return activeMQConnectionFactory;

@@ -13,7 +13,7 @@ public class JMSSendTest {
 
     public static final String DEST = "test_dest";
 
-    //@Test
+    @Test
     void send() {
         ActiveMQConnectionFactory cf = getConnectionFactory();
         JmsTemplate jmsTemplate = new JmsTemplate(cf);

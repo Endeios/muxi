@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>io.endeios</groupId>
-	<artifactId>muxi.api</artifactId>
+	<artifactId>muxi.jms</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>muxi.api</name>
 	<packaging>jar</packaging>
