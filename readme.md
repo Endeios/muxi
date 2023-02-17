@@ -31,15 +31,5 @@ the proprieties files: not a big deal but bothersome.
 - https://docs.spring.io/spring-framework/docs/3.0.x/spring-framework-reference/html/beans.html#beans-factory-lifecycle-processor
 - https://www.baeldung.com/lmax-disruptor-concurrency
 - https://www.baeldung.com/executable-jar-with-maven
-
-## Links on configuration and lifecycle
-- https://www.baeldung.com/configuration-properties-in-spring-boot
-- https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/boot-features-external-config.html
-- https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/boot-features-external-config.html#boot-features-external-config-typesafe-configuration-properties
-- https://stackoverflow.com/questions/26940583/can-i-manually-load-configurationproperties-without-the-spring-appcontext
-
-- https://www.geeksforgeeks.org/bean-life-cycle-in-java-spring/
-- https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/Lifecycle.html
-- https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/SmartLifecycle.html
-
-- https://docs.spring.io/spring-data/jdbc/docs/current/reference/html/#jdbc.repositories
+- https://www.baeldung.com/junit-5-runwith
+- https://www.baeldung.com/junit-asserting-logs

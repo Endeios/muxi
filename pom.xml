@@ -16,6 +16,7 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
+		<activemq-junit.version>5.17.0</activemq-junit.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -36,13 +37,20 @@
 		<dependency>
 			<groupId>org.apache.activemq</groupId>
 			<artifactId>activemq-broker</artifactId>
-			<version>5.17.0</version>
+			<version>${activemq-junit.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.activemq</groupId>
 			<artifactId>activemq-kahadb-store</artifactId>
-			<version>5.17.0</version>
+			<version>${activemq-junit.version}</version>
 		</dependency>
+		<!-- Actually depends on Junit 4 -->
+		<!--dependency>
+			<groupId>org.apache.activemq.tooling</groupId>
+			<artifactId>activemq-junit</artifactId>
+			<version>${activemq-junit.version}</version>
+			<scope>test</scope>
+		</dependency-->
 	</dependencies>
 
 	<build>
